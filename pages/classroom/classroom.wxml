@@ -1,0 +1,55 @@
+
+	<form bindsubmit="formSubmit">
+		<!-- 教室预约信息 -->
+		<view class="cu-bar bg-white margin-top">
+			<view class="action">
+				<text class="cuIcon-titles text-green"></text>
+				<text class="text-xl text-bold">教室预约信息</text>
+			</view>
+		</view>
+		<view class="cu-form-group cu-img sub_date">
+			<view class="title">提交日期</view>
+			<text>{{nowYear}}</text>-<text>{{nowMonth}}</text>-<text>{{nowDay}}</text>
+		</view>
+		<!-- 主题 -->
+		<view class="cu-form-group cu-img">
+			<view class="title">主题</view>
+			<input placeholder="请输入教室主题" name="title"></input>
+		</view>
+		<!-- 用途 -->
+		<view  class="cu-form-group align-start">
+			<view class="title">描述用途</view>
+			<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="请描述教室用途" name="describe"></textarea>
+		</view>
+		
+		<!-- 预约日期 -->
+		<view class="cu-form-group">
+			<view class="title">预约日期</view>
+			<view class="font-w">{{classroom_list.space_date}}</view>
+		</view>
+		
+		<!-- 时间 -->
+		<view class="cu-form-group">
+			<view class="title">预约时间段</view>
+			<view class="font-w">{{classroom_list.start_time}}</view>
+			<view class="pdg_10">至</view>
+			<view class="font-w">{{classroom_list.end_time}}</view>
+		</view>
+
+		
+		
+		<!-- 地点 -->
+		<view class="cu-form-group cu-img border-btm">
+			<view class="title">教室地点</view>
+			<text class="text-bold font-w">{{classroom_list.location}}</text>
+		</view>
+
+
+		<view class="box">
+			<view class="cu-bar btn-group">
+				<button class="cu-btn bg-blue shadow-blur round lg" form-type="submit">提 交 预 约</button>
+			</view>
+		</view>
+	</form>
+
+

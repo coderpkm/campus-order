@@ -1,0 +1,25 @@
+
+<view class="container">
+  <view class="wrapper">
+    <view class="left-top-sign">LOGIN</view>
+    <view class="welcome">
+      欢迎登录！
+    </view>
+
+    <form bindsubmit="formSubmit">
+      <view class="input-content">
+        <view class="input-item">
+          <text class="tit">学  号</text>
+          <input id="phone" type="text" placeholder="请输入您的学号" name="stunum"/>
+        </view>
+        <view class="input-item">
+          <text class="tit">密  码</text>
+          <input  id="password" type="password"  placeholder="请输入密码" name="pwd"/>
+        </view>
+      </view>
+      <button class="confirm-btn" bindtap="login" form-type="submit">登  录</button>
+    </form>
+
+  </view>
+</view>
+

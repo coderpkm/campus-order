@@ -1,0 +1,38 @@
+.contain_list {
+  position: relative;
+  background: #fff;
+  margin: 20rpx 10rpx;
+  padding: 20rpx 20rpx 0 20rpx;
+  border-radius: 10rpx;
+}
+.list_pdg {
+  padding-bottom: 20rpx;
+}
+.weizhi {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.col_blue {
+  color: blue;
+}
+.choose_item {
+  position: absolute;
+  top: 80rpx;
+  right: 20rpx;
+  display: flex;
+  justify-content: center;
+  width: 80rpx;
+  padding: 10rpx;
+  border: 3rpx solid blue;
+  border-radius: 8rpx;
+}
+.choose_seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3686ee;
+}
+
+.text-sml {
+  font-size: 22rpx;
+}

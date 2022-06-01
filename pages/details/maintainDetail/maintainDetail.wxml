@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="listContainer maintainItem" >                                
+    <view class="item-pdg">联系电话：{{maintainlist.phone_num}}</view>
+    <view class="item-pdg">维修地点：{{maintainlist.repair_site}}</view>     
+    <view class="item-pdg">故障类型：{{maintainlist.fault_type}}</view>        
+    <view class="item-pdg">故障描述：{{maintainlist.describe}}</view>
+    <view class="item-pdg">预约日期：{{maintainlist.repair_date}}</view>
+    <view class="item-pdg gzms" wx:if="{{maintainlist.state == '预约成功'}}">维修人员：{{maintainlist.serviceman}}</view>
+    <view class="zhuangtai">{{maintainlist.state}}</view>
+    <view class="item-pdg bxtime">报修日期：{{maintainlist.sub_date}}</view>
+  </view>
+</view>
+
+<view class="mt-image">
+  <image src="{{imgUrl}}" mode="widthFix"></image>
+</view>
+
+<view class="qx-btn" wx:if="{{maintainlist.state == '等待审核'}}" bindtap="deleteMaintain">
+  <view class="qx-box">
+    取消预约
+  </view>
+</view>
+

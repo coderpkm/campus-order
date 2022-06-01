@@ -1,0 +1,8 @@
+page {
+    background: #fff;
+}
+
+view {
+    padding-left: 10rpx;
+    margin-bottom: 12rpx;
+}

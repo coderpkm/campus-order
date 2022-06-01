@@ -1,0 +1,25 @@
+<!--pages/change_pwd/change_pwd.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="contain">
+    <view class="action">
+      <text class="cuIcon-titles text-blue"></text>
+      <text class="text-xl text-bold">修改密码</text>
+    </view>
+    <view class="oldpwd changepwd">
+      原密码：<input type="text" name="oldpwd" placeholder="请输入原密码"/>
+    </view>
+    <view class="newold changepwd">
+      新密码：<input type="text" name="newpwd" placeholder="请输入新密码"/>
+      <view class="tips">密码必须是6-12位，且不能为空格</view>
+    </view>
+    <view class="surepwd changepwd">
+      确认密码：<input type="text" name="surepwd" placeholder="请确认新密码"/>
+    </view>
+
+    <view class="btn-sp">
+      <button class="mini-btn" type="primary" size="mini" form-type="submit">修改密码</button>
+      <button class="mini-btn" type="default" size="mini" form-type="reset">重置</button>
+    </view>
+  </view>
+
+</form>

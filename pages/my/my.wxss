@@ -1,0 +1,108 @@
+page {
+  background: #f6fafc;
+}
+.personalContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.userLogin {
+  display:  flex;
+  align-items: center;
+  margin: 50rpx 30rpx;
+}
+.userLogin .userAvater {
+  margin: 0 20rpx;
+}
+.userLogin .avatarImg {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.userLogin .avatar {
+  overflow: hidden;
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.userLogin .userinfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 36rpx;
+}
+.userLogin .userinfo .studentno {
+  margin-bottom: 20rpx;
+}
+.nologin {
+  font-size: 42rpx;
+}
+/* 信誉分区域 */
+.credit_box {
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 45rpx 10rpx 0;
+  padding: 0 20rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  background: #eee;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+.credit_box .credit_icon {
+  padding-right: 15rpx;
+  color: #f00
+}
+.credit_box .score {
+  float: right;
+  color: #f00;
+  font-weight: bold;
+}
+.content {
+  font-weight: bold;
+}
+.pad {
+  text-align: left;
+  padding-bottom: 15rpx;
+}
+
+/* 列表 */
+.cardList {
+  background: #fff;
+  margin: 50rpx 20rpx;
+  border-radius: 15rpx;
+}
+.cardList .card-item{
+  border-top: 1rpx solid #eee;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 15rpx 0 25rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.card-item:nth-child(1) .iconfont {
+  color: #704eed;
+}
+.card-item:nth-child(2) .iconfont {
+  color: #1890ff;
+}
+.card-item:nth-child(3) .iconfont {
+  color: #c7bc0c;
+}
+.card-item:nth-child(4) .iconfont {
+  color: #f00;
+}
+.card-item:nth-child(5) .iconfont {
+  color: #ffbd27;
+}
+.card-item:last-child {
+  border-bottom: 1rpx solid #eee;
+}
+.cardList .card-item .iconfont {
+  padding-right: 20rpx;
+}
+.cardList .card-item .more {
+  float: right;
+  color: #999;
+}
+

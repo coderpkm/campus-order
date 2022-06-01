@@ -1,0 +1,43 @@
+page {
+  background: #fff;
+}
+.box {  
+  margin: 20rpx 0; 
+}
+.sub_date {
+  justify-content: left;
+  color: rgb(68, 0, 255);
+  font-size: 30rpx;
+}
+.cu-img {
+  border-top: 1px solid #eeeeee;
+}
+.cu-form-group picker .picker {
+  text-align: center;
+}
+.cu-form-group picker::after {
+  content: ''
+}
+.cu-form-group {
+  justify-content: left;
+}
+.font-w {
+  font-size: 32rpx;
+}
+.font-bold {
+  font-weight: bold;
+}
+.border-btm {
+  border-bottom: 1px solid #eeeeee;
+}
+.pdg_10 {
+  padding: 0 10rpx;
+}
+.cu-form-group view{
+  display: inline-block;
+}
+.title {
+  width: 25%;
+  text-align: justify;
+  text-align-last: justify;
+}

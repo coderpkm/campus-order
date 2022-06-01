@@ -1,0 +1,22 @@
+<form>
+  <block wx:for="{{classroom_list}}" wx:key="index">
+    <view class="contain_list" bindtap="toClassrooom" data-index="{{item.id}}">
+      <view class="list_pdg weizhi">{{item.location}}</view>
+      <view class="list_pdg">
+        <view class="text">空闲日期</view>：
+        <view>{{item.space_date}}</view>
+      </view>
+      <view class="list_pdg space_time">
+        <view class="text">空闲时间段</view>：
+        <view>
+          <text>{{item.start_time}} </text>至
+          <text> {{item.end_time}}</text></view>
+      </view>
+      <view class="list_pdg">
+        <view class="text">可容纳人数</view>：
+        <view class="col-blue">{{item.people_num}}</view>
+      </view>
+      <view class="list_pdg order">可预约</view>
+    </view>
+  </block>
+</form>

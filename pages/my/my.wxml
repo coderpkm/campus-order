@@ -1,0 +1,82 @@
+<view class="personalContainer">
+  <!-- 登录区域 -->
+  <view class="userLogin" bindtap="toLogin" >
+    <view class="userAvater" wx:if="{{isShow}}">
+      <image class="avatarImg" src="../../assets/images/my/missing-face.png"></image>
+    </view>
+    <view wx:else>
+      <open-data class="avatar" type="userAvatarUrl"></open-data>
+    </view>
+    <view class="userinfo" wx:if="{{isShow}}">
+      <view class="nologin">登录</view>
+    </view>
+    <view class="userinfo" wx:else>
+      <view class="studentno">
+        <text>学号：{{userInfo.data.studentNo}}</text>
+      </view>
+      <view class="userName">
+        <text class="nickName">姓名：{{userInfo.data.username}}</text>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!-- 信誉分 -->
+<view class="credit_box">
+  <text class="credit_icon iconfont icon-xinyufen-shouye"></text>
+  <text>信誉分</text>
+  <text class="score">{{credit_score}}</text>
+</view>
+
+<!-- 信誉分规则 -->
+<view class="cu-bar">
+  <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Modal">信誉分规则</button>
+  </view>
+</view>
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">信誉分规则</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <view class="pad">1. 信誉份低于60分将不可预约自习室座位。</view>
+      <view class="pad">2. 预约座位后须预约开始的15分钟之前在自习室进行位置签到，如预约的开始时间是08:00，则须在08:15之内签到，否则扣除信誉分10分。</view>
+      <view class="pad">3. 信誉分在下周的星期一的06:00重新恢复为100分。</view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 列表区域 -->
+<view class="cardList"> 
+  <view class="card-item" bindtap="toStudyroomRule">
+    <text class="iconfont icon-zixishi"></text>
+    <text>自习室座位预约说明</text>
+    <text class="more iconfont icon-gengguoxiangqing"></text>
+  </view>
+  <view class="card-item" bindtap="toClassroomRule">
+    <text class="iconfont icon-jiaoshi"></text>
+    <text>教室预约说明</text>
+    <text class="more iconfont icon-gengguoxiangqing"></text>
+  </view>
+  <view class="card-item" bindtap="toMaintainRule">
+    <text class="iconfont icon-ic_weixiufuwu"></text>
+    <text>宿舍维修预约说明</text>
+    <text class="more iconfont icon-gengguoxiangqing"></text>
+  </view>
+  <view class="card-item" bindtap="tomysafe">
+    <text class="iconfont icon-wangjimima"></text>
+    <text>修改密码</text>
+    <text class="more iconfont icon-gengguoxiangqing"></text>
+  </view>
+  <view class="card-item">
+    <text class="iconfont icon-guanyu"></text>
+    <text>关于</text>
+    <text class="more iconfont icon-gengguoxiangqing"></text>
+  </view>
+</view>

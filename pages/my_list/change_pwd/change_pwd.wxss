@@ -1,0 +1,32 @@
+.contain {
+  background: #fff;
+  margin: 20rpx;
+
+  border-radius: 10rpx;
+  font-size: 32rpx;
+}
+.contain .changepwd {
+  margin-top: 20rpx;
+  padding: 0 50rpx;
+}
+.action {
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+input {
+  margin-top: 8rpx;
+  padding-left: 5rpx;
+  height: 50rpx;
+  border: 1px solid #ccc
+}
+.tips {
+  font-size: 24rpx;
+}
+
+.btn-sp{
+  margin: 40rpx auto;
+  width: 50%;
+}
+.mini-btn{
+  margin-right: 15rpx;
+}

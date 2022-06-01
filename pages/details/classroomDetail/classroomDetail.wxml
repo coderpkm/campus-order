@@ -1,0 +1,47 @@
+<form action="">
+  <view class="classroomItem">
+    <view class="zhuangtai">{{classroomlist.state}}</view>
+    <view class="item-pdg zhuti">
+      <view class="text">主题</view>：
+      <view>{{classroomlist.title}}</view>
+    </view>
+    <view class="item-pdg didian">
+      <view class="text">地点</view>：
+      <view class="in-bl">{{classroomlist.location}}</view>
+    </view>
+    <view class="item-pdg yongtu">
+      <view class="text">描述用途</view>：
+      <view class="in-bl">{{classroomlist.describe}}</view>
+    </view>
+    <view class="item-pdg ordertime">
+      <view class="text">预约日期</view>：
+      <view class="in-bl">{{classroomlist.sub_date}}</view>
+    </view>
+    <view class="item-pdg ordertime">
+      <view class="text">预约时间</view>：
+      <view class="in-bl">{{classroomlist.start_time}} 至 {{classroomlist.end_time}}</view>
+    </view>
+
+  </view>
+
+<!-- 个人信息 -->
+  <view class="user-info">
+    <view class="cu-bar bg-white">
+      <view class="action">
+        <text class="cuIcon-titles text-green"></text>
+        <text class="text-xl text-bold">负责人</text>
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">学号：{{userInfo.data.studentNo}}</view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">姓名：{{userInfo.data.username}}</view>
+    </view>
+  </view>
+
+
+  <view class="qx-btn" bindtap="deleteClassroom">
+    <view class="qx-box">取消预约</view>
+  </view>
+</form>

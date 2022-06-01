@@ -1,0 +1,67 @@
+page {
+  background: #fff;
+}
+.container {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  margin: 10rpx;
+  padding: 30rpx;
+  border-radius: 10rpx;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #6a74f5 50%, #3d54f3 100%);
+}
+
+.state {
+ position: absolute;
+ top: 20rpx;
+ right: 30rpx;
+}
+.site {
+  font-size: x-large;
+  margin: 30rpx 0;
+}
+.order_time{ 
+  margin-top: 30rpx;
+}
+.sign {
+  position: absolute;
+  right: 30rpx;
+  bottom: 150rpx;
+  padding: 0 20rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+  color: #000;
+}
+.out {
+  position: absolute;
+  right: 30rpx;
+  bottom: 80rpx;
+  width: 120rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border: 1rpx solid #fff;
+  border-radius: 30rpx;
+  font-weight: 500;
+}
+.pdg_right {
+  padding-right: 20rpx;
+}
+
+.gotime {
+  margin-top: 20rpx;
+  text-align: center;
+}
+.gotime text{
+  background-color: #fff;
+  padding: 10rpx 30rpx;
+  line-height: 60rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  color: #000;
+}

@@ -1,0 +1,52 @@
+/* pages/details/maintainDetail/maintainDetail.wxss */
+
+.container,
+.user-info {
+  background: #fff;
+  border-radius: 15rpx;
+  margin: 20rpx;
+  padding: 0 15rpx 0 25rpx;
+  font-size: 32rpx;
+}
+.container {
+  position: relative;
+}
+.container .item-pdg {
+  padding-bottom: 15rpx;
+}
+.container .gzms {
+  padding-bottom: 30rpx;
+  font-weight: 600;
+}
+.container .bxtime {
+  font-size: 28rpx;
+}
+.container .zhuangtai {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  padding: 5rpx;
+  border: 2px solid #ccc;
+  color: #05db05;
+  border-radius: 15rpx;
+  font-size: 26rpx;
+}
+
+/* 图片 */
+.mt-image {
+  background: #fff;
+  margin: 20rpx;
+  border-radius: 15rpx;
+  padding: 20rpx;
+}
+
+.qx-btn {
+  line-height: 80rpx;
+  background-color: #07ce07;
+  border: 1rpx solid #ccc;
+  margin: 20rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 35rpx;
+  border-radius: 8rpx;
+}

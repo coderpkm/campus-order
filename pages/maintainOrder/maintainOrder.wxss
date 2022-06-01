@@ -1,0 +1,30 @@
+page {
+  background: #fff;
+}
+
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
+.cu-img {
+  border-top: 1px solid #eeeeee;
+}
+.standView{
+  width: 100%;
+  height: 150rpx;     /*  自定义一下需要的高度 */
+  /* background-color: black; */
+}
+
+.margin-top {
+  margin-top: 20rpx;
+}
+.cu-textarea {
+  margin-bottom: 100rpx;
+  border-bottom: 1px solid #eee;
+}
+.cilck-btn {
+  position: fixed;
+  width: 500rpx;
+  bottom: 0;
+  left: 145rpx;
+}
+

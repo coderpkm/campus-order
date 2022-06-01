@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="item">
+    <view style="font-size: 32rpx;">当前预约</view>
+    <view class="state" wx:if="{{seatlist.state == '未签到'}}">待履约</view>
+    <view style="font-size: 32rpx;" class="state"  wx:elif="{{seatlist.state == '学习中'}}">学习中</view>
+    <view style="font-size: 32rpx;" class="state"  wx:elif="{{seatlist.state == '签到已过期'}}"></view>
+    <view class="site">
+      <text>{{seatlist.seat_num}}</text>
+      <text>号座位</text>
+    </view>
+    <view style="font-size: 32rpx;" class="location">{{seatlist.location}}</view>
+    <view class="order_time">
+      <text class="pdg_right">{{seatlist.sub_date}}</text>
+      <text>{{seatlist.start_time}} - {{seatlist.end_time}}</text>
+    </view>
+
+    <view class="gotime" bindtap="goTime" wx:if="{{seatlist.state=='学习中'}}">
+      <text>续 时</text>
+    </view>
+
+    <!-- 用户没有签到则显示“签到”，否则显示学习中 -->
+    <view class="sign" wx:if="{{seatlist.state == '未签到'}}" bindtap="toLocation">签到</view>
+    <view class="sign" wx:elif="{{seatlist.state == '签到已过期'}}">签到已过期</view> 
+    <view class="sign" wx:else>学习中</view> 
+    <!-- 用户没有签到则显示“取消”，否则显示“退座” -->
+    <view class="out" wx:if="{{seatlist.state == '未签到'}}" bindtap="deleteOrder">取消</view>
+    <view wx:elif="{{seatlist.state == '签到已过期'}}"></view>
+    <view class="out" wx:else>退座</view>
+  </view>
+</view>
+

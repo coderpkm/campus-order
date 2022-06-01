@@ -1,0 +1,35 @@
+/* pages/classroom_list/classroom_list.wxss */
+.contain_list {
+  position: relative;
+  background: #fff;
+  margin: 20rpx 10rpx;
+  padding: 10rpx 0rpx 10rpx 20rpx;
+  border-radius: 10rpx;
+}
+.list_pdg {
+  padding-right: 20rpx;
+  padding-bottom: 20rpx;
+}
+.list_pdg view {
+  display: inline-block;
+}
+.text {
+  width: 20%;
+  text-align: justify;
+  text-align-last: justify;
+}
+.weizhi {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.order {
+  position: absolute;
+  right: 0rpx;
+  bottom: 0rpx;
+  font-size: 32rpx;
+  color: blue;
+}
+.col-blue {
+  color: rgb(64, 190, 240);
+}
+

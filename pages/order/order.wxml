@@ -1,0 +1,149 @@
+
+<view class="orderContainer">
+  <!-- 导航区域 -->
+  <view class="navScroll">
+    <view class="navItem" wx:for="{{navList}}" wx:key='id' >
+      <view class="navContent {{navId == item.id ? 'active' : ''}}" 
+            data-id="{{item.id}}" 
+            bindtap="navChange">
+            {{item.name}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 内容 -->
+  <!-- 自习室座位预约 -->
+  <swiper class="swiperContainer" current="{{navId}}" duration="200" bindchange="swiperChange">
+
+    <swiper-item class="swiperItem">
+      
+        <block wx:for="{{seatlist}}" wx:key='index'>
+          <view class="listContainer studyItem" 
+                bindtap="tostudyroomDetail" 
+                data-index="{{item.id}}"
+                wx:if="{{item.openid==openid}}">
+            <view class="item-pdg">
+              <view class="text">预约日期</view>：
+              <view>{{item.sub_date}}</view>
+            </view>
+            <view class="item-pdg">
+              <view class="text">预约时间</view>：
+              <view>{{item.start_time}}-{{item.end_time}}</view>
+            </view>
+            <view class="icon-more">
+              <text class="more iconfont icon-gengguoxiangqing"></text>
+            </view>
+            <view class="item-pdg">
+              <view class="text">地点</view>：
+              <view>{{item.location}}</view>
+            </view>
+            <view class="item-pdg">
+              <view class="text">座位号</view>：
+              <view>{{item.seat_num}}</view>
+            </view>
+            <!-- <view class="info-btn" wx:if="{{item.state == '未签到'}}">
+              <view class="mini-btn"  data-index="{{item.id}}" bindtap="deleteStudyroom">取消预约</view>
+            </view> -->
+            <view class="state-box">
+              <view class="class-state">{{item.state}}</view>
+            </view>
+          </view>
+        </block>
+    </swiper-item>
+    
+    <!-- 教室预约 -->
+    <swiper-item>
+      <block wx:for="{{classroomlist}}" wx:key='index'>
+        <view class="listContainer classroomItem"
+              bindtap="toclassroomDetail" 
+              data-index="{{item.id}}"
+              wx:if="{{item.openid==openid}}">
+           <!-- 预约状态 -->
+          <!-- <view class="zhuangtai">{{item.state}}</view> -->
+          <view class="item-pdg zhuti">
+            <view class="text">主题</view>：
+            <view>{{item.title}}</view>
+          </view>
+          
+          <view class="item-pdg didian">
+            <view class="text">地点</view>：
+            <view>{{item.location}}</view>
+          </view>
+          <view class="icon-more">
+            <text class="more iconfont icon-gengguoxiangqing"></text>
+          </view>
+          <view class="item-pdg yongtu">
+            <view class="text">描述用途</view>：
+            <view>{{item.describe}}</view>
+          </view>
+          <view class="item-pdg">
+            <view class="text">预约日期</view>：
+            <view>{{item.sub_date}}</view>
+          </view>
+          <view class="item-pdg ordertime">
+            <view class="text">预约时间</view>：
+            <view>{{item.start_time}} - {{item.end_time}}</view>
+          </view>
+          <!-- <view class="info-btn" wx:if="{{item.state == '等待审核'}}">
+            <view class="mini-btn" data-index="{{item.id}}" bindtap="deleteClassroom">取消预约</view>
+          </view> -->
+          <view class="state-box">
+            <view class="class-state">{{item.state}}</view>
+          </view>
+        </view>
+      </block>
+    </swiper-item>
+
+    <!-- 宿舍维修预约 -->
+    <swiper-item>
+      <block wx:for="{{maintainlist}}" wx:key='index'>
+        <view class="listContainer maintainItem" 
+              bindtap="tomaintainDetail" 
+              data-index="{{item.id}}"
+              wx:if="{{item.openid==openid}}"> 
+          <view class="item-pdg">
+            <view class="text">联系电话</view>：
+            <view>{{item.phone_num}}</view>
+          </view>
+          
+          <view class="item-pdg">
+            <view class="text">维修地点</view>：
+            <view>{{item.repair_site}}</view>
+          </view>
+          <view class="icon-more">
+            <text class="more iconfont icon-gengguoxiangqing"></text>
+          </view>        
+          <view class="item-pdg">
+            <view class="text">故障类型</view>：
+            <view>{{item.fault_type}}</view>
+          </view>        
+          <view class="item-pdg">
+            <view class="text">故障描述</view>：
+            <view>{{item.describe}}</view>
+          </view>
+          <view class="item-pdg gzms">
+            <view class="text">预约日期</view>：
+            <view>{{item.repair_date}}</view>
+          </view>
+          <!-- <view class="zhuangtai">{{item.state}}</view> -->
+          <view class="item-pdg bxtime">
+            <view class="text">报修日期</view>：
+            <view>{{item.sub_date}}</view>
+          </view>
+          <view class="item-pdg" wx:if="{{item.state == '预约成功'}}">
+            <view class="text">维修人员</view>：
+            <view>{{item.serviceman}}</view>
+          </view>
+          <!-- <view class="info-btn" wx:if="{{item.state == '等待审核'}}">
+            <view class="mini-btn" data-index="{{item.id}}" bindtap="deleteMaintain">取消预约</view>
+          </view> -->
+          <view class="state-box">
+            <view class="class-state">{{item.state}}</view>
+          </view>
+          
+        </view>
+      </block>
+    </swiper-item>
+  </swiper>
+
+</view>

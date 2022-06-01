@@ -1,0 +1,55 @@
+<view class="indexContainer">
+  <!-- 轮播图区域 -->
+  <swiper class="banner"
+        indicator-dots="true" 
+        indicator-color="#999" 
+        indicator-active-color="#f3bf43"
+        autoplay="true"
+        circular="true"
+  >
+   <swiper-item class="swiperItem" bindtap="toStudyRoom">
+      <image src="../../assets/images/banner/zixishi.png"></image>
+    </swiper-item>
+    <!-- <swiper-item class="swiperItem" bindtap="toClassRoom">
+      <image src="../../assets/images/banner/jiaoshi.jpg"></image>
+    </swiper-item> -->
+    <swiper-item class="swiperItem" bindtap="toMaintainOrder">
+      <image src="../../assets/images/banner/weixiu.png"></image>
+    </swiper-item>
+    
+  </swiper>
+
+<!-- 功能推荐 -->
+  <!-- <view class="recommend">
+    <view>
+      <text class="iconfont icon-tuijian"></text>
+      <text class="txt">功能推荐</text>
+    </view>
+  </view> -->
+
+  <!-- 导航栏区域 -->
+  <view class="navContainer">
+    <view class="navItem" bindtap="toStudyRoom">
+      <text class="iconfont icon-zixishi"></text>
+      <text>自习室座位预约</text>
+    </view>
+
+    <view class="navItem" bindtap="toClassRoom">
+      <text class="iconfont icon-jiaoshi"></text>
+      <text>教室预约</text>
+    </view>
+
+    <view class="navItem" bindtap="toMaintainOrder">
+      <text class="iconfont icon-ic_weixiufuwu"></text>
+      <text>宿舍维修预约</text>
+    </view>
+
+    <view class="navItem" bindtap="showModal">
+      <text class="iconfont icon-gdgn"></text>
+      <text>更多功能</text>
+    </view>
+  </view>
+
+  <!-- 公告区域 -->
+
+</view>

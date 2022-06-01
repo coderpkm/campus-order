@@ -1,0 +1,113 @@
+.Container {
+  margin-bottom: 100rpx;
+}
+.content {
+  padding: 20rpx;
+  background: #438FB1;
+  color: #fff;
+}
+.content .data {
+  padding: 20rpx;
+  font-size: 36rpx;
+}
+
+.content .starttime {
+  display: flex;
+  align-items: center;
+  padding: 0 0 20rpx 20rpx;
+  font-size: 36rpx;
+}
+.content .starttime .startbtn {
+  background: #fff;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+  font-weight: bold;
+  color: #000;
+}
+.content .section {
+  display: flex;
+  align-items: center;
+}
+.content .section .title {
+  padding-left: 20rpx;
+  font-size: 36rpx;
+}
+.section .picker {
+  font-size: 36rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.tips {
+  margin: 20rpx 0 0 20rpx;
+  display: flex;
+  align-items: center;
+  float: wrap;
+}
+.tips .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+}
+.tips text {
+  font-weight: bold;
+}
+
+.tips .item .iconfont {
+  font-size: 60rpx;
+  color: #ccc;
+}
+
+.tips .item:nth-of-type(2) .iconfont {
+  color: #3dce42;
+}
+.tips .item:nth-of-type(3) .iconfont {
+  color: #f00;
+}
+
+.choose {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.choose .zuowei {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.choose .zuowei .icon {
+
+  font-size: 60rpx;
+}
+
+.box {
+  position: fixed;
+  left: 150rpx;
+  bottom: 0;
+  width: 500rpx;
+}
+
+.active {
+  padding: 6rpx 0;
+  font-size: 60rpx;
+  color: #3dce42
+}
+.number {
+  font-weight: 600;
+}
+.chooseseat {
+  color: #3dce42
+}
+.nochoose {
+  color: #ccc
+}

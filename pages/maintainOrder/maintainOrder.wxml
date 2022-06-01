@@ -1,0 +1,95 @@
+
+<form bindsubmit="formSubmit">
+	<!-- 报修信息 -->
+	<view class="cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-titles text-green"></text>
+      <text class="text-xl text-bold">报修信息</text>
+    </view>
+  </view>
+  <!-- 校区 -->
+  <!-- <view class="cu-form-group cu-img">
+		<view class="title">校区</view>
+		<picker bindchange="campusChange" value="{{xq}}" range="{{campus}}" name="campus">
+			<view class="picker" >
+				{{xq?campus[xq]:'选择校区'}}
+			</view>
+		</picker>
+	</view> -->
+	<!-- 联系电话 -->
+	<view class="cu-form-group cu-img">
+		<view class="title">联系电话</view>
+		<input placeholder="输入联系电话" name="phone_num"></input>
+	</view>
+  <!-- 宿舍楼 -->
+  <!-- <view class="cu-form-group cu-img">
+		<view class="title">宿舍楼</view>
+		<picker bindchange="dormitoryChange" value="{{index}}" range="{{dormitory}}" name="dormitory">
+			<view class="picker" >
+				{{index?dormitory[index]:'选择宿舍楼'}}
+			</view>
+		</picker>
+	</view> -->
+  <!-- 宿舍号 -->
+  <view class="cu-form-group">
+		<view class="title">维修地点</view>
+		<picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" value="{{multiIndex}}" range="{{multiArray}}" name="room_num">
+			<view class="picker">
+				{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+			</view>
+		</picker>
+	</view>
+  <!-- 故障类型 -->
+  <view class="cu-form-group">
+		<view class="title">故障类型</view>
+		<picker bindchange="faultType" value="{{type}}" range="{{fault}}" name="fault_type">
+			<view class="picker">
+				{{type ? fault[type] : '选择故障类型'}}
+			</view>
+		</picker>
+  </view>
+   <!-- 预约维修时间 -->
+   <view class="cu-form-group">
+		<view class="title">预约维修时间</view>
+		<picker mode="date" bindchange="dateChange" value="{{dates}}" start="2021-12-01" end="2022-12-01" name="repair_date">
+			<view class="picker" >
+				{{dates ? dates : '选择预约维修时间'}}
+			</view>
+		</picker>
+	</view>
+  <!-- 图片 -->
+  <view class="cu-bar bg-white cu-img">
+		<view class="action">
+			图片上传
+		</view>
+		<view class="action">
+			{{imgList.length}}/1
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<1}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+  
+  <!-- 备注 -->
+  <view class="cu-form-group cu-textarea">
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" placeholder="请描述故障详情信息！！！" name="describe"></textarea>
+	</view>
+
+
+	<view class="cilck-btn">
+    <view class="cu-bar btn-group">
+      <button class="cu-btn bg-blue shadow-blur round lg" form-type="submit">确 认 预 约</button>
+    </view>
+  </view>
+</form>
+
